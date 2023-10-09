@@ -1,0 +1,136 @@
+/* Jaspreet Kaur S# 301290469 , Lab assignment 1 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  /* Prevents scroll due to pseudo element */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;  /* Place it behind the content */
+    background-image: url('/images/ak.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(10px);
+    transform: scale(1.1); /* scale up to hide edges */
+}
+
+header, .jumbotron, footer {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+    transform: translateY(-5px);
+}
+
+/* Jumbotron Styles */
+.jumbotron {
+    text-align: center;
+}
+
+.display-4 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
+hr.my-4 {
+    border-top: 1px solid #333;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.btn-primary.btn-lg {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary.btn-lg:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+}
+
+/* Form and Contact Styles */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
